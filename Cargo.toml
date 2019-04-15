@@ -1,0 +1,11 @@
+[package]
+name = "hello-solar-system"
+version = "0.1.0"
+authors = ["Rajiv Kurien <rajiv.kurien@zuhlke.com>"]
+edition = "2018"
+
+[[bin]]
+name = "main"
+path = "src/main.rs"
+
+[dependencies]
