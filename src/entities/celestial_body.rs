@@ -1,6 +1,6 @@
 use std::ops::Add;
 
-#[derive(Debug)]
+#[derive(Debug, PartialEq, Copy, Clone)]
 pub struct CelestialBody {
     pub mass: u32,
     pub position: Point,
@@ -39,14 +39,14 @@ impl Add for Point {
 }
 
 #[test]
-fn celestial_body_has_mass() {
+fn has_mass() {
     let planet = CelestialBody::new(10);
 
     assert_eq!(planet.mass, 10);
 }
 
 #[test]
-fn celestial_body_has_position() {
+fn has_position() {
     let planet = CelestialBody::new(10);
 
     assert_eq!(planet.position, Point {
@@ -56,7 +56,7 @@ fn celestial_body_has_position() {
 }
 
 #[test]
-fn celestial_body_with_velocity_moves() {
+fn with_velocity_moves() {
     let mut planet = CelestialBody {
         mass: 10,
         position: Point { x: 0, y: 0 },
