@@ -11,3 +11,5 @@ path = "src/main.rs"
 [dependencies]
 rusttype = "0.5.2"
 nalgebra = "0.18.0"
+futures = "0.1"
+
